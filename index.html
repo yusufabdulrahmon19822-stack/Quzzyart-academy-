@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QUZZYART ACADEMY | Learn Graphic Design With Canva</title>
+<meta name="description" content="Learn practical graphic design with Canva at QUZZYART ACADEMY. Learn, Create, Earn.">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;background:#fff;color:#080808;line-height:1.6;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+.container{width:92%;max-width:1150px;margin:auto}
+header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.94);backdrop-filter:blur(15px);border-bottom:1px solid #eee}
+nav{min-height:75px;display:flex;align-items:center;justify-content:space-between}
+.logo img{width:58px;height:58px;object-fit:contain}
+.nav-links{display:flex;gap:24px;align-items:center;font-size:14px;font-weight:800}
+.nav-button{background:#080808;color:#fff;padding:12px 18px;border-radius:50px}
+.hero{min-height:calc(100vh - 75px);display:flex;align-items:center;position:relative;overflow:hidden;background:linear-gradient(135deg,#fff 0%,#fff 55%,#fff7bd 100%)}
+.hero:before{content:"";position:absolute;width:550px;height:550px;background:#ffd400;border-radius:50%;right:-230px;top:-190px;opacity:.8}
+.hero-content{position:relative;z-index:2;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:60px;padding:80px 0}
+.badge{display:inline-block;background:#fff;border:1px solid #ddd;padding:8px 14px;border-radius:50px;font-size:12px;font-weight:900;letter-spacing:1px}
+.badge span{display:inline-block;width:8px;height:8px;background:#ffd400;border-radius:50%;margin-right:7px}
+h1{font-size:clamp(48px,7vw,82px);line-height:.95;letter-spacing:-4px;margin:25px 0}
+h1 span{background:#ffd400;padding:0 8px}
+.hero-text{color:#555;font-size:18px;max-width:620px}
+.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.button{display:inline-flex;justify-content:center;align-items:center;padding:15px 23px;border-radius:50px;font-weight:900;font-size:14px;transition:.3s}
+.button:hover{transform:translateY(-3px)}
+.primary{background:#080808;color:#fff}
+.secondary{background:#fff;border:1px solid #ddd}
+.hero-card{background:#ffd400;border-radius:32px;padding:28px;box-shadow:20px 25px 70px rgba(0,0,0,.13);transform:rotate(1deg)}
+.hero-logo{background:#fff;border-radius:25px;padding:25px;min-height:280px;display:flex;justify-content:center;align-items:center}
+.hero-logo img{width:85%;max-width:350px}
+.hero-card-label{font-size:12px;font-weight:900;letter-spacing:2px;margin-top:25px;text-transform:uppercase}
+.hero-card h2{font-size:30px;line-height:1.1;margin-top:8px}
+.black-strip{background:#080808;color:#fff;padding:18px 0}
+.strip-content{display:flex;justify-content:center;gap:35px;flex-wrap:wrap;font-size:12px;font-weight:900;letter-spacing:2px;text-transform:uppercase}
+section{padding:100px 0}
+.section-label{color:#777;font-size:12px;font-weight:900;letter-spacing:2px;text-transform:uppercase}
+.section-title{font-size:clamp(38px,5vw,60px);line-height:1;letter-spacing:-3px;margin:12px 0 18px}
+.section-description{color:#666;font-size:17px;max-width:700px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:45px}
+.card{border:1px solid #e8e8e8;border-radius:24px;padding:30px;transition:.3s;background:#fff}
+.card:hover{transform:translateY(-6px);box-shadow:0 20px 50px rgba(0,0,0,.08)}
+.icon{width:55px;height:55px;background:#ffd400;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:23px;margin-bottom:22px}
+.card h3{font-size:21px;margin-bottom:8px}
+.card p{color:#666;font-size:15px}
+.dark-section{background:#080808;color:#fff}
+.dark-section .section-description{color:#aaa}
+.learning-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px}
+.learning-list{display:grid;gap:14px}
+.learning-item{display:flex;gap:16px;padding:21px;background:#131313;border:1px solid #292929;border-radius:18px}
+.number{width:40px;height:40px;flex-shrink:0;border-radius:50%;background:#ffd400;color:#080808;display:flex;align-items:center;justify-content:center;font-weight:900}
+.learning-item h3{margin-bottom:3px}
+.learning-item p{color:#aaa;font-size:14px}
+.coach-box{background:linear-gradient(135deg,#ffd400,#fff0a0);border-radius:32px;padding:45px;display:grid;grid-template-columns:.7fr 1.3fr;gap:45px;align-items:center}
+.coach-photo{min-height:330px;border-radius:25px;background:#111;display:flex;align-items:center;justify-content:center;text-align:center;color:#999;padding:25px}
+.coach-box h2{font-size:clamp(35px,5vw,55px);line-height:1;letter-spacing:-3px;margin:10px 0 18px}
+.coach-box p{color:#3e3e3e}
+.quote{font-size:23px;line-height:1.3;font-weight:800;margin:25px 0 12px}
+.proof-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:45px}
+.proof{border:1px solid #e8e8e8;border-radius:24px;padding:30px}
+.proof h3{font-size:24px;margin-bottom:7px}
+.proof p{color:#666}
+.testimonial{margin-top:40px;padding:35px;background:#f7f7f7;border-radius:25px}
+.testimonial p{font-size:20px;font-weight:700;line-height:1.5}
+.testimonial small{display:block;margin-top:15px;color:#777}
+.social-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:40px}
+.social-card{padding:30px;background:#f7f7f7;border:1px solid #e8e8e8;border-radius:24px;font-weight:900;transition:.3s}
+.social-card:hover{background:#ffd400;transform:translateY(-4px)}
+.faq{max-width:850px;margin:auto}
+details{border-bottom:1px solid #e5e5e5;padding:22px 0}
+summary{cursor:pointer;font-weight:900;display:flex;justify-content:space-between;gap:20px;list-style:none}
+summary::-webkit-details-marker{display:none}
+details p{padding-top:12px;color:#666}
+.final-cta{background:#ffd400;text-align:center;padding:100px 20px}
+.final-cta h2{max-width:850px;margin:auto;font-size:clamp(43px,7vw,75px);line-height:.95;letter-spacing:-4px}
+.final-cta p{max-width:620px;margin:20px auto 0;color:#444;font-size:17px}
+.final-button{display:inline-flex;margin-top:30px;padding:16px 26px;background:#080808;color:#fff;border-radius:50px;font-weight:900}
+footer{background:#080808;color:#fff;padding:35px 0}
+.footer-content{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+footer img{width:55px}
+footer p{color:#888;font-size:13px}
+.footer-links{display:flex;gap:20px;font-size:13px;font-weight:bold}
+@media(max-width:850px){
+.nav-links a:not(.nav-button){display:none}
+.hero-content,.learning-grid,.coach-box{grid-template-columns:1fr}
+.cards{grid-template-columns:1fr}
+.proof-grid,.social-grid{grid-template-columns:1fr}
+section{padding:75px 0}
+}
+@media(max-width:520px){
+.container{width:90%}
+h1{font-size:51px;letter-spacing:-3px}
+.hero-text{font-size:16px}
+.buttons{flex-direction:column}
+.button{width:100%}
+.hero-card{padding:20px}
+.coach-box{padding:25px}
+.coach-photo{min-height:260px}
+.footer-content{flex-direction:column;align-items:flex-start}
+}
+</style>
+</head>
+<body>
+
+<header>
+<div class="container">
+<nav>
+<a href="#home" class="logo"><img src="logo.png" alt="QUZZYART ACADEMY"></a>
+<div class="nav-links">
+<a href="#about">About</a>
+<a href="#learn">What You'll Learn</a>
+<a href="#proof">Proof</a>
+<a class="nav-button" href="https://wa.me/2349034688827?text=Hello%20QUZZYART%20ACADEMY%2C%20I%27m%20interested%20in%20learning%20graphic%20design%20with%20Canva." target="_blank">Join on WhatsApp</a>
+</div>
+</nav>
+</div>
+</header>
+
+<section class="hero" id="home">
+<div class="container hero-content">
+<div>
+<div class="badge"><span></span> CANVA GRAPHIC DESIGN TRAINING</div>
+<h1>Stop just using Canva. <span>Learn to design.</span></h1>
+<p class="hero-text">Build practical graphic design skills with Canva through guided training, real design practice and a learning approach focused on helping you create with confidence.</p>
+<div class="buttons">
+<a class="button primary" href="https://wa.me/2349034688827?text=Hello%20QUZZYART%20ACADEMY%2C%20I%27m%20interested%20in%20learning%20graphic%20design%20with%20Canva." target="_blank">Start Learning →</a>
+<a class="button secondary" href="#learn">See What You'll Learn</a>
+</div>
+</div>
+<div class="hero-card">
+<div class="hero-logo"><img src="logo.png" alt="QUZZYART ACADEMY Logo"></div>
+<div class="hero-card-label">Learn · Create · Earn</div>
+<h2>Graphic Design with Canva, made practical.</h2>
+</div>
+</div>
+</section>
+
+<div class="black-strip"><div class="container strip-content"><span>Learn</span><span>•</span><span>Create</span><span>•</span><span>Practice</span><span>•</span><span>Grow</span><span>•</span><span>Earn</span></div></div>
+
+<section id="about">
+<div class="container">
+<div class="section-label">Why QUZZYART ACADEMY</div>
+<h2 class="section-title">Learn design with a practical mindset.</h2>
+<p class="section-description">The goal isn't simply to learn where buttons are in Canva. It's to understand design and become more confident creating useful visual content.</p>
+<div class="cards">
+<div class="card"><div class="icon">✦</div><h3>Practical Learning</h3><p>Learn through actual design practice instead of relying only on theory.</p></div>
+<div class="card"><div class="icon">▣</div><h3>Canva Focused</h3><p>Build your graphic design skills around Canva and learn how to use the platform more intentionally.</p></div>
+<div class="card"><div class="icon">↗</div><h3>Creative Growth</h3><p>Develop your understanding of layout, typography, composition and visual communication.</p></div>
+</div>
+</div>
+</section>
+
+<section class="dark-section" id="learn">
+<div class="container learning-grid">
+<div>
+<div class="section-label">What You'll Learn</div>
+<h2 class="section-title">From opening Canva to creating with confidence.</h2>
+<p class="section-description">Learn the fundamentals and put them into practice through graphic design projects.</p>
+</div>
+<div class="learning-list">
+<div class="learning-item"><div class="number">01</div><div><h3>Design Fundamentals</h3><p>Understand principles that help make a design clear, balanced and visually effective.</p></div></div>
+<div class="learning-item"><div class="number">02</div><div><h3>Canva Tools & Workflow</h3><p>Learn how to navigate Canva and use its features more intentionally.</p></div></div>
+<div class="learning-item"><div class="number">03</div><div><h3>Layout & Typography</h3><p>Learn how to arrange elements and work with typography effectively.</p></div></div>
+<div class="learning-item"><div class="number">04</div><div><h3>Real Design Practice</h3><p>Apply what you learn by creating practical graphic design projects.</p></div></div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="coach-box">
+<div class="coach-photo"><div><strong>COACH PHOTO</strong><br><br>Replace this area with the coach's professional photo.</div></div>
+<div>
+<div class="section-label">Meet the Coach</div>
+<h2>Learn from someone who teaches graphic design.</h2>
+<p>QUZZYART ACADEMY is focused on helping people develop practical graphic design skills using Canva.</p>
+<div class="quote">“I learned graphic design from the coach behind QUZZYART ACADEMY.”</div>
+<p>— Yusuf Creative, student</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="proof">
+<div class="container">
+<div class="section-label">Build Trust With Proof</div>
+<h2 class="section-title">See the person, the work and the learning.</h2>
+<p class="section-description">Real evidence is stronger than exaggerated promises. This section can showcase the academy's actual work, student experiences and teaching content.</p>
+<div class="proof-grid">
+<div class="proof"><h3>Student Work</h3><p>Add real designs created by students during or after their training.</p></div>
+<div class="proof"><h3>Student Testimonials</h3><p>Add genuine feedback from students who have experienced the training.</p></div>
+<div class="proof"><h3>Coach's Work</h3><p>Showcase selected designs and educational content from the coach.</p></div>
+<div class="proof"><h3>Online Presence</h3><p>Visitors can explore QUZZYART ACADEMY through its social media platforms.</p></div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="section-label">Student Experience</div>
+<h2 class="section-title">A learning journey that started somewhere.</h2>
+<div class="testimonial"><p>“I learned graphic design from him, and that experience became part of my own journey as a graphic designer.”</p><small>— Yusuf Creative</small></div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="section-label">Follow QUZZYART</div>
+<h2 class="section-title">Explore the academy beyond this page.</h2>
+<p class="section-description">See the academy's content and stay connected through its social platforms.</p>
+<div class="social-grid">
+<a href="https://youtube.com/@quzzyart?si=7JX5XP6Lke9eA0Vo" target="_blank" class="social-card">▶ YouTube — @quzzyart<br><small>Watch content →</small></a>
+<a href="https://www.facebook.com/profile.php?id=61586928526409" target="_blank" class="social-card">f Facebook — QUZZYART ACADEMY<br><small>Visit Facebook →</small></a>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container faq">
+<div style="text-align:center;margin-bottom:40px"><div class="section-label">FAQ</div><h2 class="section-title">Questions before you start?</h2></div>
+<details><summary>Do I need previous graphic design experience?<span>+</span></summary><p>The training is focused on learning practical graphic design with Canva. Contact the academy to confirm the recommended starting level.</p></details>
+<details><summary>What software will I learn?<span>+</span></summary><p>The training focuses on Canva for graphic design.</p></details>
+<details><summary>How do I join the training?<span>+</span></summary><p>Click any WhatsApp button on this page and contact QUZZYART ACADEMY for the current training details.</p></details>
+<details><summary>Can I contact the academy before registering?<span>+</span></summary><p>Yes. You can contact QUZZYART ACADEMY through WhatsApp using the button below.</p></details>
+</div>
+</section>
+
+<section class="final-cta">
+<div class="container">
+<h2>Ready to learn graphic design with Canva?</h2>
+<p>Take the first step. Contact QUZZYART ACADEMY and ask about the current training.</p>
+<a href="https://wa.me/2349034688827?text=Hello%20QUZZYART%20ACADEMY%2C%20I%27m%20interested%20in%20learning%20graphic%20design%20with%20Canva." target="_blank" class="final-button">Chat With QUZZYART ACADEMY →</a>
+</div>
+</section>
+
+<footer>
+<div class="container footer-content">
+<div><img src="logo.png" alt="QUZZYART ACADEMY"><p>Learn • Create • Earn</p></div>
+<div class="footer-links">
+<a href="https://youtube.com/@quzzyart?si=7JX5XP6Lke9eA0Vo" target="_blank">YouTube</a>
+<a href="https://www.facebook.com/profile.php?id=61586928526409" target="_blank">Facebook</a>
+<a href="https://wa.me/2349034688827" target="_blank">WhatsApp</a>
+</div>
+</div>
+</footer>
+
+</body>
+</html>
